@@ -1,0 +1,13 @@
+2B
+INSERT INTO `personnage` (`id`, `nom`, `espece`, `age`, `idsport`) VALUES (NULL, 'nom', 'Espece1', '23', '1');
+
+
+3B
+SELECT * FROM `personnage` INNER JOIN voiture ON personnage.id_voiture = voiture.id WHERE voiture.id LIKE '1'
+
+3C
+SELECT * FROM `personnage` INNER JOIN sport ON personnage.id_sport = sport.id WHERE sport.id LIKE '1'
+
+
+QUESTION 4
+SELECT * FROM `personnage` INNER JOIN sport ON personnage.id_sport = sport.id WHERE sport.id LIKE 'concours de mangeur de paté de crabe' AND SELECT * FROM `personnage` INNER JOIN voiture ON personnage.id_voiture = voiture.id WHERE voiture.id LIKE 'sous-marin'
